@@ -7,13 +7,14 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
+import 'package:pytorch_lite_example/RunModelByImageDemo.dart';
 
 import 'package:pytorch_lite_example/main.dart';
 
 void main() {
   testWidgets('Verify Platform version', (WidgetTester tester) async {
     // Build our app and trigger a frame.
-    await tester.pumpWidget(MyApp());
+    await tester.pumpWidget(RunModelByImageDemo());
 
     // Verify that platform version is retrieved.
     expect(
