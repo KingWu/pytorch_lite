@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:pytorch_lite_example/RunModelByCameraDemo.dart';
 import 'package:pytorch_lite_example/RunModelByImageDemo.dart';
 
 void main() => runApp(ChooseDemo());
@@ -24,7 +25,12 @@ class _ChooseDemoState extends State<ChooseDemo> {
               child: Column(
                 children: [
                   TextButton(
-                    onPressed: () => {},
+                    onPressed: () => {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => RunModelByCameraDemo()),
+                      )
+                    },
                     style: TextButton.styleFrom(
                       backgroundColor: Colors.blue,
                     ),
